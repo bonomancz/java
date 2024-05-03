@@ -19,7 +19,7 @@ public class Main {
         System.out.println(cena);
     }
 
-    public static void ukol5() {
+    public static void ukol5() { // oprava ukolu c.5
         double cena = 0.0;
         for (int i = 0; i < 10; i++) {
             cena += 0.1;
