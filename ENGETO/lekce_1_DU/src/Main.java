@@ -20,9 +20,9 @@ public class Main {
     }
 
     public static void ukol5() { // oprava ukolu c.5
-        double cena = 0.0;
+        BigDecimal cena = BigDecimal.ZERO;
         for (int i = 0; i < 10; i++) {
-            cena += 0.1;
+            cena = cena.add(BigDecimal.valueOf(0.1));
         }
         System.out.println(cena);
     }
