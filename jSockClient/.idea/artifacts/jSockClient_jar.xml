@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="jSockClient:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/jSockClient_jar</output-path>
+    <root id="root">
+      <element id="archive" name="jSockClient.jar">
+        <element id="module-output" name="jSockClient" />
+      </element>
+    </root>
+  </artifact>
+</component>
