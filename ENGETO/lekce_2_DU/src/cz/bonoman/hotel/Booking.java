@@ -2,12 +2,11 @@ package cz.bonoman.hotel;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.ArrayList;
 
 public class Booking {
-    private int roomId, id;
-    private LocalDate checkIn, checkOut;
-    private List<Integer> guestIdList = new ArrayList<>();
+    private final int roomId, id;
+    private final LocalDate checkIn, checkOut;
+    private final List<Integer> guestIdList;
 
     public Booking(List<Integer> guestIdList, int roomId, LocalDate checkIn, LocalDate checkOut, int id){
         this.guestIdList = guestIdList;
@@ -19,13 +18,13 @@ public class Booking {
 
     // getters, setters
     public List<Integer> gsGuestIdList(){return this.guestIdList;}
-    public void gsGuestIdList(List<Integer> input){this.guestIdList = input;}
+    //public void gsGuestIdList(List<Integer> input){this.guestIdList = input;}
     public int gsRoomId(){return this.roomId;}
-    public void gsRoomId(int input){this.roomId = input;}
+    //public void gsRoomId(int input){this.roomId = input;}
     public LocalDate gsCheckIn(){return this.checkIn;}
-    public void gsCheckIn(LocalDate input){this.checkIn = input;}
+    //public void gsCheckIn(LocalDate input){this.checkIn = input;}
     public LocalDate gsCheckOut(){return this.checkOut;}
-    public void gsCheckOut(LocalDate input){this.checkOut = input;}
+    //public void gsCheckOut(LocalDate input){this.checkOut = input;}
     public int gsId(){return this.id;}
-    public void gsId(int input){this.id = input;}
+    //public void gsId(int input){this.id = input;}
 }
