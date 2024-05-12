@@ -42,7 +42,8 @@ public class Manager {
     public String getCzDateFormat(String input){
         String retVal;
         LocalDate date = LocalDate.parse(input);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy", new Locale("cz", "CZ"));
+        Locale locale = new Locale.Builder().setLanguage("cs").setRegion("CZ").build();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d.M.yyyy", locale);
         retVal = date.format(formatter);
         return retVal;
     }
