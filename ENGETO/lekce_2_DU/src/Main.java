@@ -36,15 +36,18 @@ public class Main {
 
         // define rooms
         retVal += "### ROOMS:\n";
-        manager.roomListAdd(new Room(1, 1000, true, true, manager.getNextRoomId()));
-        manager.roomListAdd(new Room(1, 1000, true, true, manager.getNextRoomId()));
-        manager.roomListAdd(new Room(3, 2400, false, true, manager.getNextRoomId()));
+        Room room1 = new Room(1, 1000, true, true, manager.getNextRoomId());
+        manager.roomListAdd(room1);
+        Room room2 = new Room(1, 1000, true, true, manager.getNextRoomId());
+        manager.roomListAdd(room2);
+        Room room3 = new Room(3, 2400, false, true, manager.getNextRoomId());
+        manager.roomListAdd(room3);
         retVal += manager.printRoomList() + "\n";
 
         // define bookings
         retVal += "### BOOKINGS:\n";
-        manager.bookingListAdd(new Booking(new ArrayList<>(List.of(guest1)) , 1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26), manager.getNextBookingId()));
-        manager.bookingListAdd(new Booking(new ArrayList<>(List.of(guest1, guest2)) , 3, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), manager.getNextBookingId()));
+        manager.bookingListAdd(new Booking(new ArrayList<>(List.of(guest1)) , room1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26), manager.getNextBookingId()));
+        manager.bookingListAdd(new Booking(new ArrayList<>(List.of(guest1, guest2)) , room3, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), manager.getNextBookingId()));
         retVal += manager.printBookingList() + "\n";
 
         System.out.println(retVal);

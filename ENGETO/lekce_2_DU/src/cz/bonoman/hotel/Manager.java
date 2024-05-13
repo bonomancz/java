@@ -109,7 +109,7 @@ public class Manager {
         for(Booking booking : this.bookingList){
             retVal.append("Check-In: ").append(this.getCzDateFormat(booking.gsCheckIn().toString()));
             retVal.append(", Check-Out: ").append(this.getCzDateFormat(booking.gsCheckOut().toString()));
-            retVal.append(", Room ID: ").append(booking.gsRoomId());
+            retVal.append(", Room ID: ").append(booking.gsRoom().gsId());
 
             StringBuilder guestName = new StringBuilder();
             for(Guest guest : booking.gsGuestsList()){
