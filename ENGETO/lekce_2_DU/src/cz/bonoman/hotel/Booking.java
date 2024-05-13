@@ -6,10 +6,10 @@ import java.util.List;
 public class Booking {
     private final int roomId, id;
     private final LocalDate checkIn, checkOut;
-    private final List<Integer> guestIdList;
+    private final List<Guest> guestsList;
 
-    public Booking(List<Integer> guestIdList, int roomId, LocalDate checkIn, LocalDate checkOut, int id){
-        this.guestIdList = guestIdList;
+    public Booking(List<Guest> guestsList, int roomId, LocalDate checkIn, LocalDate checkOut, int id){
+        this.guestsList = guestsList;
         this.roomId = roomId;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
@@ -17,8 +17,8 @@ public class Booking {
     }
 
     // getters, setters
-    public List<Integer> gsGuestIdList(){return this.guestIdList;}
-    //public void gsGuestIdList(List<Integer> input){this.guestIdList = input;}
+    public List<Guest> gsGuestsList(){return this.guestsList;}
+    //public void gsGuestsList(List<Guest> input){this.guestsList = input;}
     public int gsRoomId(){return this.roomId;}
     //public void gsRoomId(int input){this.roomId = input;}
     public LocalDate gsCheckIn(){return this.checkIn;}

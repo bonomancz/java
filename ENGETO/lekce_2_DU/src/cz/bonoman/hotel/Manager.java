@@ -112,12 +112,8 @@ public class Manager {
             retVal.append(", Room ID: ").append(booking.gsRoomId());
 
             StringBuilder guestName = new StringBuilder();
-            for(int guestID : booking.gsGuestIdList()){
-                for(Guest guest : this.guestList) {
-                    if(guestID == guest.gsId()) {
-                        guestName.append(guest.gsName()).append(" ").append(guest.gsSurName()).append(", ");
-                    }
-                }
+            for(Guest guest : booking.gsGuestsList()){
+                guestName.append(guest.gsName()).append(" ").append(guest.gsSurName()).append(", ");
             }
 
             retVal.append(", Guests: ").append(guestName).append("\n");

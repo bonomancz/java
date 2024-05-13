@@ -28,8 +28,10 @@ public class Main {
 
         // define guests
         retVal += "### GUESTS:\n";
-        manager.guestListAdd(new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13), manager.getNextGuestId()));
-        manager.guestListAdd(new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5), manager.getNextGuestId()));
+        Guest guest1 = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13), manager.getNextGuestId());
+        manager.guestListAdd(guest1);
+        Guest guest2 = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5), manager.getNextGuestId());
+        manager.guestListAdd(guest2);
         retVal += manager.printGuestList() + "\n";
 
         // define rooms
@@ -41,8 +43,8 @@ public class Main {
 
         // define bookings
         retVal += "### BOOKINGS:\n";
-        manager.bookingListAdd(new Booking(new ArrayList<>(List.of(1)) , 1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26), manager.getNextBookingId()));
-        manager.bookingListAdd(new Booking(new ArrayList<>(List.of(1, 2)) , 3, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), manager.getNextBookingId()));
+        manager.bookingListAdd(new Booking(new ArrayList<>(List.of(guest1)) , 1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26), manager.getNextBookingId()));
+        manager.bookingListAdd(new Booking(new ArrayList<>(List.of(guest1, guest2)) , 3, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), manager.getNextBookingId()));
         retVal += manager.printBookingList() + "\n";
 
         System.out.println(retVal);
