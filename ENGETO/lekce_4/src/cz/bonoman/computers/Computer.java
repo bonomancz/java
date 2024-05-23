@@ -23,7 +23,7 @@ public class Computer implements Comparable<Computer> {
     public LocalDate getPurchaseDate() {return purchaseDate;}
 
     @Override
-    public int compareTo(Computer o) {
+    public int compareTo(Computer computerForSort) {
         return 0;
     }
 }
