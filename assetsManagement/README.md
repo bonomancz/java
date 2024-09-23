@@ -1,0 +1,3 @@
+ASSETS MANAGEMENT
+_________________________
+Assets registering system
